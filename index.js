@@ -3,7 +3,7 @@ import { obtenerPrecioDolarTarjeta } from './api.js';
 document.getElementById('calcularImpuestos').addEventListener('click', async function () {
     const valorEnDolares = parseFloat(document.getElementById('valorCompra').value.trim());
     const precioDolarOficial = await obtenerPrecioDolarTarjeta();
-    const valorPesosSinImpuestos = valorEnDolares * precioDolarOficial
+    const valorPesosSinImpuestos = valorEnDolares * precioDolarOficial;
     const valorIngresado = valorEnDolares * precioDolarOficial;
 
     const resultadoImpuestoPaisElemento = document.getElementById('resultadoImpuestoPais');
@@ -20,15 +20,23 @@ document.getElementById('calcularImpuestos').addEventListener('click', async fun
 
             const impuestoPaisFormateado = impuestoPais.toFixed(2);
             const impuestoGananciasFormateado = impuestoGanancias.toFixed(2);
-            const totalFormateado = total.toFixed(2);
-
+            const totalFormateado = total.toLocaleString('es-AR', {
+                style: 'currency',
+                currency: 'ARS'
+            });
 
             resultadoImpuestoPaisElemento.innerText = `$${impuestoPaisFormateado}`;
             resultadoImpuestoGananciasElemento.innerText = `$${impuestoGananciasFormateado}`;
-            totalElemento.innerText = `$${totalFormateado}`;
+            totalElemento.innerText = totalFormateado;
 
             document.getElementById('resultadosContainer').style.display = 'block';
             document.getElementById('resultadoTotal').style.display = 'block';
+
+
+            const haUsadoApp = true;
+            if (haUsadoApp) {
+                document.getElementById('cardMostrar').style.display = 'block';
+            }
         } catch (error) {
             console.error('Error:', error);
         }
