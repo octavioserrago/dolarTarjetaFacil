@@ -32,10 +32,20 @@ document.getElementById('calcularImpuestos').addEventListener('click', async fun
             document.getElementById('resultadosContainer').style.display = 'block';
             document.getElementById('resultadoTotal').style.display = 'block';
 
-
             const haUsadoApp = true;
             if (haUsadoApp) {
-                document.getElementById('cardMostrar').style.display = 'block';
+                const cardMostrar = document.getElementById('cardMostrar');
+                cardMostrar.style.display = 'block';
+
+
+                if (window.innerWidth <= 768) {
+
+                    const invitarBoton = document.getElementById('invitarBoton');
+                    const computedStyles = getComputedStyle(invitarBoton);
+                    const marginBottom = parseInt(computedStyles.marginBottom);
+                    const newMarginBottom = marginBottom + 20;
+                    invitarBoton.style.marginBottom = `${newMarginBottom}px`;
+                }
             }
         } catch (error) {
             console.error('Error:', error);
