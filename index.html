@@ -39,8 +39,10 @@
             left: 0;
         }
 
-        .content {
-            margin-bottom: 90px;
+        @media (prefers-color-scheme: dark) {
+            input[type="number"] {
+                color: black;
+            }
         }
     </style>
 </head>
@@ -80,12 +82,6 @@
         <p class="text-lg font-semibold">Total: <span class="text-gray-700" id="total"></span></p>
     </div>
 
-    <div id="cardMostrar" style="display: none;"
-        class="max-w-sm mx-auto mt-10 p-6 bg-white dark:bg-gray-800 dark:border-gray-700">
-
-        <a href="https://cafecito.app/octavioserrago"><button id="invitarBoton"
-                class="px-3 py-2 text-sm font-medium text-white bg-gradient-to-r from-indigo-400 via-indigo-500 to-indigo-600 rounded-lg hover:bg-gradient-to-r hover:from-indigo-500 hover:via-indigo-600 hover:to-indigo-700 focus:ring-4 focus:outline-none focus:ring-indigo-300">Invítame
-                un cafecito</button></a>
     </div>
 
     <footer id="footer">
@@ -93,7 +89,11 @@
                 class="fa-brands fa-github"></i>
             Participa de este proyecto</a><br>
         <a href="https://github.com/enzonotario/esjs-dolar-api">Gracias a la API de <span
-                class="text-underline">enzonotario</span></a>
+                class="text-underline">enzonotario</span></a><br>
+
+        <a href="https://cafecito.app/octavioserrago"><button id="invitarBoton"
+                class="px-3 py-2 text-sm font-medium text-white bg-gradient-to-r from-indigo-400 via-indigo-500 to-indigo-600 rounded-lg hover:bg-gradient-to-r hover:from-indigo-500 hover:via-indigo-600 hover:to-indigo-700 focus:ring-4 focus:outline-none focus:ring-indigo-300">Invítame
+                un cafecito</button></a>
     </footer>
 
     <script type="module" src="index.js"></script>
