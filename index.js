@@ -44,3 +44,5 @@ document.getElementById('calcularImpuestos').addEventListener('click', async fun
         }
     }
 });
+
+
