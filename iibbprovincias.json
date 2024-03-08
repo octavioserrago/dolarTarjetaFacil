@@ -1,0 +1,100 @@
+{
+    "provincias": [
+        {
+            "nombre": "Buenos Aires",
+            "iibb": 2
+        },
+        {
+            "nombre": "CABA",
+            "iibb": 2
+        },
+        {
+            "nombre": "Catamarca",
+            "iibb": 0
+        },
+        {
+            "nombre": "Chaco",
+            "iibb": 5.5
+        },
+        {
+            "nombre": "Chubut",
+            "iibb": 0
+        },
+        {
+            "nombre": "Corrientes",
+            "iibb": 0
+        },
+        {
+            "nombre": "Córdoba",
+            "iibb": 3
+        },
+        {
+            "nombre": "Entre Ríos",
+            "iibb": 0
+        },
+        {
+            "nombre": "Formosa",
+            "iibb": 0
+        },
+        {
+            "nombre": "Jujuy",
+            "iibb": 0
+        },
+        {
+            "nombre": "La Pampa",
+            "iibb": 1
+        },
+        {
+            "nombre": "La Rioja",
+            "iibb": 0
+        },
+        {
+            "nombre": "Mendoza",
+            "iibb": 0
+        },
+        {
+            "nombre": "Misiones",
+            "iibb": 0
+        },
+        {
+            "nombre": "Neuquén",
+            "iibb": 4
+        },
+        {
+            "nombre": "Río Negro",
+            "iibb": 5
+        },
+        {
+            "nombre": "San Juan",
+            "iibb": 0
+        },
+        {
+            "nombre": "San Luis",
+            "iibb": 0
+        },
+        {
+            "nombre": "Salta",
+            "iibb": 3.6
+        },
+        {
+            "nombre": "Santa Cruz",
+            "iibb": 0
+        },
+        {
+            "nombre": "Santa Fe",
+            "iibb": 0
+        },
+        {
+            "nombre": "Santiago del Estero",
+            "iibb": 0
+        },
+        {
+            "nombre": "Tierra del Fuego",
+            "iibb": 3
+        },
+        {
+            "nombre": "Tucumán",
+            "iibb": 0
+        }
+    ]
+}
