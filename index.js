@@ -13,7 +13,8 @@ function cargarProvincias() {
             });
 
             document.getElementById('calcularImpuestos').addEventListener('click', async function () {
-                const valorEnDolares = parseFloat(document.getElementById('valorCompra').value.trim());
+                let valorEnDolares = parseFloat(document.getElementById('valorCompra').value.trim());
+
                 const precioDolarOficial = await obtenerPrecioDolarTarjeta();
                 const valorPesosSinImpuestos = valorEnDolares * precioDolarOficial;
                 const valorIngresado = valorEnDolares * precioDolarOficial;

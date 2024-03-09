@@ -34,9 +34,9 @@
             class="content max-w-sm mx-auto mt-10 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <form>
                 <h4 class="font-bold">Valor de la compra en Dolares:</h4>
-                <input type="number" id="valorCompra" name="valorCompra" placeholder="Ingrese Valor en USD"
+                <input type="text" id="valorCompra" name="valorCompra" placeholder="Ingrese Valor en USD"
                     class="mt-1 focus:ring-blue-500 focus:border-blue-500 border border-gray-100 border-solid border-2 w-full shadow-sm sm:text-sm rounded-md"
-                    oninput="this.value = Math.abs(this.value).toString().slice(0,9)">
+                    oninput="this.value = this.value.replace(/[^0-9.,]/g, '').replace(/,/g, '.').slice(0,9)">
             </form>
 
             <select id="provincia" name="provincia"
