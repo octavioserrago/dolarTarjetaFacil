@@ -1,7 +1,7 @@
 import { obtenerPrecioDolarTarjeta } from './api.js';
 
 function cargarProvincias() {
-    fetch('iibbprovincias.json')
+    fetch('../iibbprovincias.json')
         .then(response => response.json())
         .then(data => {
             const selectProvincia = document.getElementById('provincia');
