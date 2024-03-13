@@ -1,5 +1,5 @@
 :root {
-    --fondo: white;
+    --fondo: #f2f2f2;
     --texto: black;
 }
 
@@ -15,6 +15,16 @@
 
     #valorCompra,
     #valorCompra::placeholder {
+        color: black;
+    }
+
+
+    .bank-card {
+        color: black;
+        background: linear-gradient(to bottom, #ffffff 90%, #6c63ff);
+    }
+
+    input[type="number"] {
         color: black;
     }
 
@@ -46,13 +56,6 @@ body {
     padding: 10px 0px;
 }
 
-
-
-@media (prefers-color-scheme: dark) {
-    input[type="number"] {
-        color: black;
-    }
-}
 
 #calcularImpuestos:hover,
 #calcularImpuestos:active {

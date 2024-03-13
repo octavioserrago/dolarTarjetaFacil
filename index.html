@@ -48,9 +48,10 @@
 
 
             <a id="calcularImpuestos"
-                class="inline-flex items-center px-3 py-2 mt-3 text-sm font-medium text-center text-white bg-gradient-to-r from-purple-400 via-purple-500 to-purple-600 rounded-lg hover:bg-gradient-to-r hover:from-purple-500 hover:via-purple-600 hover:to-purple-700 focus:ring-4 focus:outline-none focus:ring-purple-300 dark:bg-gradient-to-r dark:from-purple-600 dark:via-purple-700 dark:to-purple-800 dark:hover:from-purple-700 dark:hover:via-purple-800 dark:hover:to-purple-900">
+                class="inline-flex items-center px-3 py-2 mt-3 text-sm font-medium text-center text-white bg-gradient-to-r from-violet-600 to-indigo-600 rounded-lg hover:bg-gradient-to-r hover:from-violet-500 hover:to-indigo-700 focus:ring-4 focus:outline-none focus:ring-purple-300 dark:bg-gradient-to-r dark:from-purple-600 dark:via-purple-700 dark:to-purple-800 dark:hover:from-purple-700 dark:hover:via-purple-800 dark:hover:to-purple-900">
                 Calcular Total
             </a>
+
 
 
 
@@ -79,7 +80,95 @@
             <p class="text-lg font-semibold">Total: <span class="text-green-700" id="total"></span></p>
         </div>
 
+        <div class="bank-cards-outer-container max-w-4xl mx-auto mt-10" style="display: none;">
+
+            <div class="bank-cards-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <div
+                    class="bank-card bg-white border border-gray-200 rounded-lg shadow p-6 dark:bg-gray-800 dark:border-gray-700">
+                    <img src="img/banks/meli.png" alt="Logo Mercado libre" class="bank-logo w-16 h-16 mx-auto mb-4">
+                    <h3 class="bank-name text-lg font-semibold text-center">Mercado pago</h3>
+                    <p class="bank-price text-center text-gray-500" id="precioMeli"></p>
+                </div>
+
+                <div
+                    class="bank-card bg-white border border-gray-200 rounded-lg shadow p-6 dark:bg-gray-800 dark:border-gray-700">
+                    <img src="img/banks/personal-pay.png" alt="Logo Personal pay"
+                        class="bank-logo w-16 h-16 mx-auto mb-4 rounded-full">
+                    <h3 class="bank-name text-lg font-semibold text-center">Personal Pay</h3>
+                    <p class="bank-price text-center text-gray-500" id="precioPpay"></p>
+                </div>
+
+
+                <div
+                    class="bank-card bg-white border border-gray-200 rounded-lg shadow p-6 dark:bg-gray-800 dark:border-gray-700">
+                    <img src="img/banks/lemon.png" alt="Logo Lemon"
+                        class="bank-logo w-16 h-16 mx-auto mb-4 rounded-full">
+                    <h3 class="bank-name text-lg font-semibold text-center">Lemon</h3>
+                    <p class="bank-price text-center text-gray-500" id="precioLemon"></p>
+                </div>
+
+
+
+                <div
+                    class="bank-card bg-white border border-gray-200 rounded-lg shadow p-6 dark:bg-gray-800 dark:border-gray-700">
+                    <img src="img/banks/fiwind.jpeg" alt="Logo Fiwind"
+                        class="bank-logo w-16 h-16 mx-auto mb-4 rounded-full">
+                    <h3 class="bank-name text-lg font-semibold text-center">Fiwind</h3>
+                    <p class="bank-price text-center text-gray-500" id="precioFiwind"></p>
+                </div>
+
+
+
+                <div
+                    class="bank-card bg-white border border-gray-200 rounded-lg shadow p-6 dark:bg-gray-800 dark:border-gray-700">
+                    <img src="img/banks/belo.png" alt="Logo Belo" class="bank-logo w-20 h-15 mx-auto mb-9 mt-3">
+                    <h3 class="bank-name text-lg font-semibold text-center">Belo</h3>
+                    <p class="bank-price text-center text-gray-500" id="precioBelo"></p>
+                </div>
+
+
+                <div
+                    class="bank-card bg-white border border-gray-200 rounded-lg shadow p-6 dark:bg-gray-800 dark:border-gray-700">
+                    <img src="img/banks/buenbit.png" alt="Logo Buenbit"
+                        class="bank-logo w-16 h-16 mx-auto mb-4 rounded-full">
+                    <h3 class="bank-name text-lg font-semibold text-center">Buen bit</h3>
+                    <p class="bank-price text-center text-gray-500" id="precioBuenbit"></p>
+                </div>
+
+                <div
+                    class="bank-card bg-white border border-gray-200 rounded-lg shadow p-6 dark:bg-gray-200 dark:border-gray-700">
+                    <img src="img/banks/uala.png" alt="Logo Uala" class="bank-logo w-16 h-16 mx-auto mb-7">
+                    <h3 class="bank-name text-lg font-semibold text-center">Uala</h3>
+                    <p class="bank-price text-center text-gray-500" id="precioUala"></p>
+                </div>
+
+                <div
+                    class="bank-card bg-white border border-gray-200 rounded-lg shadow p-6 dark:bg-gray-800 dark:border-gray-700">
+                    <img src="img/banks/galicia.jpeg" alt="Logo Galicia"
+                        class="bank-logo w-16 h-16 mx-auto mb-7 rounded-full">
+                    <h3 class="bank-name text-lg font-semibold text-center">Galicia</h3>
+                    <p class="bank-price text-center text-gray-500" id="precioGalicia"></p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <article class="max-w-md mx-auto text-center my-8">
+            <p class="text-sm text-black mb-4 dark:text-white">Dolartarjetasimple.com® es un proyecto colaborativo que
+                busca brindar información sobre el costo final de una compra en dólares, incluyendo impuestos y
+                comparando los valores entre diferentes bancos. Nuestro objetivo es proporcionar una herramienta precisa
+                para planificar compras internacionales desde Argentina.</p>
+            <p class="text-sm text-black mb-4 dark:text-white">Para más detalles, visita la sección <a
+                    href="pages/avisoLegal.html" class="text-black dark:text-white underline">Aviso Legal</a>.</p>
+        </article>
+
+
+
     </div>
+
+
 
     <footer id="footer">
         <a href="https://github.com/octavioserrago/dolarTarjetaFacil" class="text-lg underline font-bold"><i

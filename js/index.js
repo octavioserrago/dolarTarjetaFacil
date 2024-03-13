@@ -26,6 +26,14 @@ function cargarProvincias() {
                 const resultadoImpuestoGananciasElemento = document.getElementById('resultadoImpuestoGanancias');
                 const resultadoImpuestoIVAElemento = document.getElementById('resultadoImpuestoIVA');
                 const resultadoImpuestoIIBBElemento = document.getElementById('resultadoImpuestoIIBB');
+
+                const precioMeli = document.getElementById('precioMeli');
+                const precioPpay = document.getElementById('precioPpay');
+                const precioLemon = document.getElementById('precioLemon');
+                const precioGalicia = document.getElementById('precioGalicia');
+                const precioFiwind = document.getElementById('precioFiwind');
+                const precioUala = document.getElementById('precioUala');
+                const precioBelo = document.getElementById('precioBelo');
                 const totalElemento = document.getElementById('total');
 
                 if (!provinciaSeleccionada) {
@@ -46,11 +54,25 @@ function cargarProvincias() {
                     const impuestoIVA = (valorIngresado * 20.184) / 100;
                     const impuestoIIBB = (valorIngresado * porcentajeIIBB) / 100;
                     const total = valorPesosSinImpuestos + impuestoPais + impuestoGanancias + impuestoIVA + impuestoIIBB;
+                    const totalMeli = ((total * 5) / 100) + total;
+                    const totalPpay = ((total * 1.7) / 100) + total;
+                    const totalUala = ((total * 20.03) / 100) + total;
+                    const totalBelo = ((total * 5) / 100) + total;
+                    const totalLemon = ((total * 4.15) / 100) + total;
+                    const totalGalicia = "No confirmado";
+                    const totalFiwind = ((total * 3.16) / 100) + total;
+                    const totalBuenbit = "No confirmado";
 
                     const impuestoPaisFormateado = impuestoPais.toFixed(2);
                     const impuestoGananciasFormateado = impuestoGanancias.toFixed(2);
                     const impuestoIVAFormateado = impuestoIVA.toFixed(2);
                     const impuestoIIBBFormateado = impuestoIIBB.toFixed(2);
+                    const totalMeliFormateado = totalMeli.toFixed(2);
+                    const totalPpayFormateado = totalPpay.toFixed(2);
+                    const totalUalaFormateado = totalUala.toFixed(2);
+                    const totalBeloFormateado = totalBelo.toFixed(2);
+                    const totalLemonFormateado = totalLemon.toFixed(2);
+                    const totalFiwindFormateado = totalFiwind.toFixed(2);
                     const totalFormateado = total.toLocaleString('es-AR', {
                         style: 'currency',
                         currency: 'ARS'
@@ -62,8 +84,19 @@ function cargarProvincias() {
                     resultadoImpuestoIIBBElemento.innerText = `$${impuestoIIBBFormateado}`;
                     totalElemento.innerText = totalFormateado;
 
+                    precioMeli.innerText = `$${totalMeliFormateado}`;
+                    precioPpay.innerText = `$${totalPpayFormateado}`;
+                    precioUala.innerText = `$${totalUalaFormateado}`;
+                    precioBelo.innerText = `$${totalBeloFormateado}`;
+                    precioLemon.innerText = `$${totalLemonFormateado}`;
+                    precioFiwind.innerText = `$${totalFiwindFormateado}`;
+                    precioGalicia.innerText = `$${totalGalicia}`;
+                    precioBuenbit.innerText = `$${totalBuenbit}`;
+
                     document.getElementById('resultadosContainer').style.display = 'block';
                     document.getElementById('resultadoTotal').style.display = 'block';
+                    document.querySelector('.bank-cards-outer-container').style.display = 'block';
+
 
                     if (window.innerWidth <= 768) {
                         const invitarBoton = document.getElementById('invitarBoton');
