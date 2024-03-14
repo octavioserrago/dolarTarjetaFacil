@@ -34,6 +34,7 @@ function cargarProvincias() {
                 const precioFiwind = document.getElementById('precioFiwind');
                 const precioUala = document.getElementById('precioUala');
                 const precioBelo = document.getElementById('precioBelo');
+                const precioBuenbit = document.getElementById('precioBuenbit');
                 const totalElemento = document.getElementById('total');
 
                 if (!provinciaSeleccionada) {
@@ -57,11 +58,12 @@ function cargarProvincias() {
                     const totalMeli = ((total * 5) / 100) + total;
                     const totalPpay = ((total * 1.7) / 100) + total;
                     const totalUala = ((total * 20.03) / 100) + total;
-                    const totalBelo = ((total * 5) / 100) + total;
-                    const totalLemon = ((total * 4.15) / 100) + total;
+                    const totalBelo = ((total * 4.99) / 100) + total;
+                    const totalLemon = ((total * 4.25) / 100) + total;
                     const totalGalicia = "No confirmado";
                     const totalFiwind = ((total * 3.16) / 100) + total;
-                    const totalBuenbit = "No confirmado";
+
+                    const totalBuenbit = ((total * 4.835) / 100) + total;
 
                     const impuestoPaisFormateado = impuestoPais.toFixed(2);
                     const impuestoGananciasFormateado = impuestoGanancias.toFixed(2);
@@ -73,6 +75,7 @@ function cargarProvincias() {
                     const totalBeloFormateado = totalBelo.toFixed(2);
                     const totalLemonFormateado = totalLemon.toFixed(2);
                     const totalFiwindFormateado = totalFiwind.toFixed(2);
+                    const totalBuenbitFormateado = totalBuenbit.toFixed(2);
                     const totalFormateado = total.toLocaleString('es-AR', {
                         style: 'currency',
                         currency: 'ARS'
@@ -91,7 +94,7 @@ function cargarProvincias() {
                     precioLemon.innerText = `$${totalLemonFormateado}`;
                     precioFiwind.innerText = `$${totalFiwindFormateado}`;
                     precioGalicia.innerText = `$${totalGalicia}`;
-                    precioBuenbit.innerText = `$${totalBuenbit}`;
+                    precioBuenbit.innerText = `$${totalBuenbitFormateado}`;
 
                     document.getElementById('resultadosContainer').style.display = 'block';
                     document.getElementById('resultadoTotal').style.display = 'block';
